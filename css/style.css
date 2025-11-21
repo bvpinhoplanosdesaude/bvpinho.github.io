@@ -1,6 +1,6 @@
 /********** Template CSS **********/
 :root {
-    --primary: #13C5DD;
+    --primary: #07767f;
     --secondary: #354F8E;
     --light: #EFF5F9;
     --dark: #1D2A4D;
@@ -105,7 +105,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0); /* desktop sem transparência */
+    background: rgba(5, 124, 132, 0.45); /* desktop transparência */
     z-index: 1;
 }
 
@@ -334,4 +334,10 @@
 .service-item:hover {
     transform: translateY(-6px);
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+.font-mini {
+    font-size: 12px;
+}
+.bv-planos {
+    background-color: #abafaf; /* escolha sua cor */
 }
