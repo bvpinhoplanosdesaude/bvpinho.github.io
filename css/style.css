@@ -393,7 +393,7 @@ width: auto;
 position: fixed;
 bottom: 90px;
 right: 28px;
-z-index: 9999;
+z-index: 999;
 font-family: 'Roboto', sans-serif;
 display: flex;
 flex-direction: column;
