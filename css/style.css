@@ -393,11 +393,24 @@ width: auto;
 position: fixed;
 bottom: 90px;
 right: 28px;
-z-index: 999;
+z-index: 1010; /* abaixo do navbar sticky (1020) */
 font-family: 'Roboto', sans-serif;
 display: flex;
 flex-direction: column;
 align-items: flex-end;
+pointer-events: none; /* container não bloqueia cliques */
+}
+/* em mobile: desce o widget para não conflitar com o menu */
+@media (max-width: 991.98px) {
+#wa-chat-widget {
+bottom: 20px;
+right: 16px;
+}
+}
+/* FAB e bubble: reativa cliques */
+#wa-fab,
+#wa-chat-bubble {
+pointer-events: auto;
 }
 /* Popup bubble */
 #wa-chat-bubble {
@@ -567,31 +580,17 @@ opacity: 0; transition: opacity .3s;
 }
 #wa-chat-widget:hover .wa-tooltip { opacity: 1; }
 /* ═══════════════════════════════════════════════
-5. NAVBAR – Sempre em primeiro plano (mobile)
+5. NAVBAR – Sempre em primeiro plano
 ═══════════════════════════════════════════════ */
 .sticky-top {
-z-index: 10000 !important;
-}
-.navbar-collapse {
-z-index: 10000;
+z-index: 1020 !important;
 }
 @media (max-width: 991.98px) {
 .navbar-collapse.show,
 .navbar-collapse.collapsing {
-position: relative;
-z-index: 10000;
 background: #fff;
 box-shadow: 0 8px 24px rgba(0,0,0,0.10);
 border-radius: 0 0 12px 12px;
 padding: 8px 16px 16px;
 }
-}
-
-/* ── WhatsApp widget: não bloqueia cliques fora dele ── */
-#wa-chat-widget {
-pointer-events: none;
-}
-#wa-chat-bubble,
-#wa-fab {
-pointer-events: auto;
 }
