@@ -385,7 +385,7 @@
 						<h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">Contato</h4>
 						<p class="mb-4">BVPinho Corretora especialista em Planos de Saúde, atendimento personalizado e transparência.</p>
 						<p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i>São Caetano do Sul - SP</p>
-						<p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>beatrizpinho2@yahoo.com</p>
+						<p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d1b3b4b0a5a3b8aba1b8bfb9bee391a8b0b9bebeffb2bebc">[email&#160;protected]</a></p>
 						<p class="mb-3"><i class="fa fa-phone-alt text-primary me-3"></i>+55 (11) 9 8907-4921</p>
 						<p class="mb-0">Horário de Atendimento:</p>
 						<p class="mb-0">Segunda a Sexta-feira, das 9h às 18h.</p>
@@ -444,8 +444,8 @@
 		</div>
 		<!-- Footer End -->
 
-		<!-- WhatsApp Chat Widget (substitui o btn-whatsapp original) -->
-		<div id="wa-chat-widget">
+		<!-- WhatsApp Desktop: Chat Widget animado (oculto no mobile) -->
+		<div id="wa-chat-widget" class="d-none d-md-flex">
 			<div id="wa-chat-bubble">
 				<div class="wa-bubble-header">
 					<img src="img/apple-touch-icon.png" alt="BVPinho"
@@ -482,12 +482,19 @@
 				</svg>
 			</button>
 		</div>
-		<!-- /WhatsApp Chat Widget -->
+		<!-- /WhatsApp Desktop Widget -->
+
+		<!-- WhatsApp Mobile: botão simples (oculto no desktop) -->
+		<a href="https://api.whatsapp.com/send?phone=5511989074921&text=Olá! Gostaria de uma cotação de plano de saúde."
+		class="btn-whatsapp d-flex d-md-none" target="_blank" aria-label="WhatsApp">
+			<img src="img/WhatsApp.svg" alt="WhatsApp">
+		</a>
+		<!-- /WhatsApp Mobile -->
 		<!-- Back to Top (original) -->
 		<a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>		
 
 		<!-- JavaScript Libraries -->
-		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+		<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
 		<script src="lib/easing/easing.min.js"></script>
 		<script src="lib/waypoints/waypoints.min.js"></script>
@@ -612,11 +619,7 @@
 
 			fab.addEventListener('click', function() { isOpen ? closeWidget() : openWidget(); });
 			closeBtn.addEventListener('click', function(e) { e.stopPropagation(); closeWidget(); });
-
-			// Abre automaticamente após 4 segundos
-			setTimeout(function() { if (!isOpen) openWidget(); }, 4000);
 		});
 		</script>
-		<!-- MCLX BOTTOM END -->
 	</body>
 </html>
